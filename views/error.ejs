@@ -1,0 +1,16 @@
+<%- include('includes/_header') %>
+
+    <main id="main">
+        <h1 style="color:red;">⚠️ Error occurred</h1>
+        <p>
+            <%= message %>
+        </p>
+
+        <% if (error && error.stack) { %>
+            <pre><%= error.stack %></pre>
+            <% } %>
+
+                <a href="/">⬅ Back to Home</a>
+    </main>
+
+    <%- include('includes/_footer') %>
